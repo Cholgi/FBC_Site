@@ -4,7 +4,7 @@ import json
 import os
 os.makedirs("web/data", exist_ok=True)
 
-with open("web/data/results.json", "a", encoding="utf-8") as f:
+with open("web/data/news_results.json", "a", encoding="utf-8") as f:
     f.write(result + "\n")  # 줄바꿈 포함해서 누적 저장
 
 
