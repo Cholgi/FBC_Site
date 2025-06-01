@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 result = "테스트문구예용~"
 
 import json
@@ -13,7 +12,3 @@ os.system("git add web/data/news_results.json")
 os.system('git commit -m "update result"')
 os.system("git push origin main")  # 브랜치 이름에 따라 'main' or 'master'
 
-=======
-with open("result.txt", "a", encoding="utf-8") as f:
-    f.write("보너스 아이템을 획득했습니다!\n")
->>>>>>> ffd5276a5cc6cd6d82086f7c32e9c9ee67561694
