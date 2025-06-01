@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -21,3 +22,26 @@ fetch("data/results.json")
     });
   });
 </script>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>News Archive</title>
+</head>
+<body>
+  <h1>News Archive</h1>
+  <div id="result-box" style="white-space: pre-line; font-family: sans-serif;"></div>
+
+  <script>
+    async function loadResults() {
+      const res = await fetch("News_result.txt");
+      const text = await res.text();
+      document.getElementById("result-box").textContent = text;
+    }
+
+    loadResults();
+  </script>
+</body>
+</html>
+>>>>>>> ffd5276a5cc6cd6d82086f7c32e9c9ee67561694
