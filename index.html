@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>News Archive</title>
 </head>
 <body>
@@ -9,15 +9,20 @@
   <div id="result-box" style="white-space: pre-line; font-family: sans-serif;"></div>
 
   <script>
-fetch("data/results.json")
-  .then(res => res.text())
-  .then(text => {
-    const lines = text.trim().split("\n");
-    lines.forEach(line => {
-      const result = JSON.parse(line);
-      const li = document.createElement("li");
-      li.textContent = `Score: ${result.score} (${result.timestamp})`;
-      document.getElementById("results").appendChild(li);
-    });
-  });
-</script>
+    fetch("web/data/news_results.json")
+      .then(res => res.text())
+      .then(text => {
+        const resultBox = document.getElementById("result-box");
+        const lines = text.trim().split("\n"); // 줄바꿈 기준 분리
+        lines.forEach(line => {
+          const p = document.createElement("p"); // 한 줄씩 <p> 태그로 감싸기
+          p.textContent = line;
+          resultBox.appendChild(p);
+        });
+      })
+      .catch(err => {
+        console.error("파일 불러오기 실패:", err);
+      });
+  </script>
+</body>
+</html>
