@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>News Archive</title>
+</head>
+<body>
+  <h1>News Archive</h1>
+  <div id="result-box" style="white-space: pre-line; font-family: sans-serif;"></div>
+
+  <script>
+fetch("data/results.json")
+  .then(res => res.text())
+  .then(text => {
+    const lines = text.trim().split("\n");
+    lines.forEach(line => {
+      const result = JSON.parse(line);
+      const li = document.createElement("li");
+      li.textContent = `Score: ${result.score} (${result.timestamp})`;
+      document.getElementById("results").appendChild(li);
+    });
+  });
+</script>
