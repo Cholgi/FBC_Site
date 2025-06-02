@@ -23,7 +23,7 @@
         data.forEach(item => {
           const li = document.createElement("li");
           const link = document.createElement("a");
-          link.href = `detail.html?id=${item.id}`;  // 상세페이지로 이동
+          link.href = `news.html?id=${item.id}`;  // 상세페이지로 이동
           link.textContent = item.title;
           li.appendChild(link);
           ul.appendChild(li);
