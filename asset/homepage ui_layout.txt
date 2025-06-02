@@ -1,0 +1,35 @@
+홈페이지 ui 디자인
+
+배경색 #fcf6e6
+
+-
+메인 화면 
+제목(464pt): Playfair Display, Bold,
+제목 밑 글자(40pt) : Source Serif Variable, regular
+마이크 밑 'nothing is real'(46pt) : Special Elite Regular, regular
+이 부분 높이 525mm
+
+Breaking news(53pt) : Playfair Display, semiBold
+기사 제목(33pt) : Adobe 명조 std M
+more(40pt): Source Serif Variable, regular
+뉴스 기사들 선 간 간격 59mm
+이 부분 높이 376mm
+
+
+About(83pt) : Playfair Display, regular
+404(109pt) : Prata Regular, regular
+project(123pt) : Playfair Display, Medium
+이 부분 높이 310mm
+
+
+가장 밑 부분 저작권 관련 문단(26pt) : Special Elite Regular, regular
+이 부분 높이 113mm
+
+
+-
+기사 화면
+영수증 부분 높이 1160mm
+
+More(68pt) : Source Serif Variable, Bold
+기사 제목(33pt) : Adobe 명조 std M
+이 부분 높이 235mm
