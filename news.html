@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>뉴스 상세보기</title>
+</head>
+<body>
+  <h1 id="news-title"></h1>
+  <p id="news-content" style="white-space: pre-line;"></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    fetch("web/data/news_results.json")
+      .then(res => res.json())
+      .then(data => {
+        const news = data.find(item => item.id === id);
+        if (news) {
+          document.getElementById("news-title").textContent = news.title;
+          document.getElementById("news-content").textContent = news.content;
+        } else {
+          document.body.innerHTML = "<p>뉴스를 찾을 수 없습니다.</p>";
+        }
+      });
+  </script>
+</body>
+</html>

@@ -12,28 +12,27 @@
   <h2 id="imgheadline">nothing is real</h2>
   <hr>
   <h2 id="newslist">Breaking News</h2>
-  <hr>
 
   <div id="result-box" style="white-space: pre-line; font-family: sans-serif;"></div>
 
   <script>
     fetch("web/data/news_results.json")
-      .then(res => res.text())
-      .then(text => {
-        const resultBox = document.getElementById("result-box");
-        const lines = text.trim().split("\n"); // 줄바꿈 기준 분리
-        lines.forEach(line => {
-          const p = document.createElement("p"); // 한 줄씩 <p> 태그로 감싸기
-          p.textContent = line;
-          resultBox.appendChild(p);
+      .then(res => res.json())
+      .then(data => {
+        const ul = document.getElementById("news-list");
+        data.forEach(item => {
+          const li = document.createElement("li");
+          const link = document.createElement("a");
+          link.href = `detail.html?id=${item.id}`;  // 상세페이지로 이동
+          link.textContent = item.title;
+          li.appendChild(link);
+          ul.appendChild(li);
         });
-      })
-      .catch(err => {
-        console.error("파일 불러오기 실패:", err);
       });
   </script>
 </body>
 <footer>
+  <hr>
   <img src="asset/icon_booth.png" alt="부스이미지" width="400" id="logoimg"> 
   <hr>
   <img src="asset/icon_logo.png" alt="이미지없음" width="100" id="logoimg">
