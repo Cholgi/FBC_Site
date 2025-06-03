@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 
 body{background-color: #fcf6e6;
@@ -15,7 +16,7 @@ body.NewsDetail {
   background-attachment: scroll;
 }
 
-#newstitle {
+h1 {
     color:#000000;
     font-size:125px;
     text-align: center;
@@ -40,7 +41,7 @@ body.NewsDetail {
     line-height: 50%;
 }
 
-#newstitle {
+.newstitle { /*breaking news*/
     color:#000000;
     font-size:22px;
     text-align: center;
@@ -49,6 +50,15 @@ body.NewsDetail {
     font-weight: bold;
 }
 
+.texts {
+    color:#000000;
+    font-size:18px;
+    text-align: center;
+    font-family: "Noto Serif KR";
+    font-weight: normal;
+}
+
+/* 이미지 스타일 */
 #micimg {
     display : block;
     margin : 60px auto auto auto;
@@ -67,16 +77,8 @@ body.NewsDetail {
 
 /* 뉴스 상세페이지 */
 .section {
-  margin: 260px auto;     
+  margin: 300px auto;     
   padding: 20px;         
   width: 30%;
   text-align: center;           
-}
-
-.newstext {
-  color:#000000;
-  font-size:14px;
-  text-align: center;
-  font-family: "Source Serif 4";
-  font-weight: normal;           
 }
