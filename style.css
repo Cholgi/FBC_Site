@@ -88,22 +88,31 @@ body.NewsDetail {
     height: auto;
     margin : 60px 0 0 0;  
 }
-#logoimg {
+#boothimg {
     display : block;
-    margin : 60px auto auto auto;
-    transform: translateX(180px); 
+    margin : 40px auto 30px auto;
+    width: 700px;
 }
 #centerimg {
     display : block;
     margin : 0px auto auto auto;
-
 }
 
-/* 뉴스 상세페이지 박스 */
-.section {
-  margin: 360px auto;     
-  padding: 20px;         
-  width: 320px;
+#newspageimg {
+  width: 420px;
+  margin: auto;  
+}
+
+#aboutimg{
+  width: 50vw;
+  height: auto;
+  margin: auto;
+}
+
+/* 박스 */
+.section { /* 뉴스 상세페이지.. 지금은 없어도됨 */
+  margin: 115px auto;              
+  width: 420px;
   text-align: center;           
 }
 
@@ -112,6 +121,12 @@ body.NewsDetail {
   margin: 30px auto;
   width: clamp(350px,75vw,660px);     
   text-align: left;
+}
+
+.aboutsection { 
+  margin: auto;              
+  width: clamp(350px, 75vw, 660px);
+  text-align: center;           
 }
 
 /* 지피티가 하라고한거 */
@@ -152,6 +167,12 @@ ul#news-list {
   border: none;
   border-bottom: 1px solid #aaa;
   margin-top: 5px;
-  width: 50%;         /* ← 바의 전체 길이 */
-  margin: 5px auto;   /* ← 가운데 정렬 */
+}
+
+.obj-divider {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  margin-top: 5px;
+  width: 50%;        
+  margin: 5px auto;   
 }
