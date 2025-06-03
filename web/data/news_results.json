@@ -3,5 +3,10 @@
     "id": "news1",
     "title": "네 번째 뉴스입니다.",
     "image": "images/news4.jpg"
+  },
+  {
+    "id": "news2",
+    "title": "네 번째 뉴스입니다.",
+    "image": "images/news4.jpg"
   }
 ]
