@@ -19,9 +19,9 @@ body.NewsDetail {
 /* 글자 스타일 모음 */
 #Maintitle {
     color:#000000;
-    font-size:125px;
-    text-align: center;
+    font-size:clamp(100px,25vw,200px);
     font-family: "Playfair Display";
+    text-align: center;
     line-height: 0%;
 }
 
@@ -72,11 +72,21 @@ body.NewsDetail {
     word-wrap: break-word;
 }
 
+.listofnews {
+    color:#000000;
+    font-size:15px;
+    text-align: center;
+    font-family: "Noto Serif KR";
+    font-weight: normal;
+    word-wrap: break-word;
+}
+
 /* 이미지 스타일 */
 #micimg {
     display : block;
-    margin : 60px auto auto auto;
-    transform: translateX(-60px);    
+    width: clamp(260px, 50vw, 450px);
+    height: auto;
+    margin : 60px 0 0 0;  
 }
 #logoimg {
     display : block;
@@ -91,8 +101,55 @@ body.NewsDetail {
 
 /* 뉴스 상세페이지 박스 */
 .section {
-  margin: 330px auto;     
+  margin: 360px auto;     
   padding: 20px;         
   width: 320px;
   text-align: center;           
+}
+
+.micimg-wrapper {
+  display: block;
+  margin: 30px auto;
+  width: clamp(350px,75vw,660px);     
+  text-align: left;
+}
+
+/* 지피티가 하라고한거 */
+ul#news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: clamp(300px, 60vw, 600px);
+}
+
+.news-item {
+  margin: 20px 0;
+}
+
+.news-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-family: "Noto Serif KR";
+  font-size: clamp(14px, 2vw, 20px);
+}
+
+.news-title {
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.news-divider {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  margin-top: 5px;
 }

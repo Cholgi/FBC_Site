@@ -8,11 +8,14 @@
 <body>
   <h1 id="Maintitle">Momnt</h1>
   <h2 id="subtitle">404: Not True Project - on the Distortion of Media<br/>Directed by Team FBC</h2>
-  <img src="asset/icon_mic.png" alt="이미지없음" width="260" id="micimg">
-  <h2 id="imgheadline">nothing is real</h2>
+  <div class="micimg-wrapper">
+    <img src="asset/icon_mic.png" alt="이미지없음" id="micimg">
+    <h2 id="imgheadline">nothing is real</h2>
+  </div>
   <hr>
   <h2 id="newstitle">Breaking News</h2>
-  <ul id="news-list" class="texts"></ul>
+  <hr>
+  <ul id="news-list" class="listofnews"></ul>
 
 
   <script>
@@ -22,10 +25,16 @@
         const ul = document.getElementById("news-list");
         data.forEach(item => {
           const li = document.createElement("li");
-          const link = document.createElement("a");
-          link.href = `news.html?id=${item.id}`;  // 상세페이지로 이동
-          link.textContent = item.title;
-          li.appendChild(link);
+          li.className = "news-item";
+
+          li.innerHTML = `
+            <a href="news.html?id=${item.id}" class="news-link">
+              <span class="news-title">${item.title}</span>
+              <img src="asset/icon_arrow.png" class="arrow-icon" alt="→">
+            </a>
+            <hr class="news-divider">
+          `;
+
           ul.appendChild(li);
         });
       });
