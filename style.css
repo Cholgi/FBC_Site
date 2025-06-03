@@ -152,4 +152,6 @@ ul#news-list {
   border: none;
   border-bottom: 1px solid #aaa;
   margin-top: 5px;
+  width: 50%;         /* ← 바의 전체 길이 */
+  margin: 5px auto;   /* ← 가운데 정렬 */
 }
