@@ -2,28 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
 
-
+/* 배경설정 */
 body{background-color: #fcf6e6;
 }
 
 body.NewsDetail {
   background-image: url("asset/icon_receipt.png");
-  background-size: 500px auto;
+  background-size: 600px auto;
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
 
-h1 {
+/* 글자 스타일 모음 */
+#Maintitle {
     color:#000000;
     font-size:125px;
     text-align: center;
     font-family: "Playfair Display";
     line-height: 0%;
 }
-#headline {
+
+#subtitle {
     color:#000000;
     font-size:14px;
     text-align: center;
@@ -41,7 +43,7 @@ h1 {
     line-height: 50%;
 }
 
-.newstitle { /*breaking news*/
+#newstitle { /*breaking news*/
     color:#000000;
     font-size:22px;
     text-align: center;
@@ -50,12 +52,24 @@ h1 {
     font-weight: bold;
 }
 
-.texts {
+
+.textstitle { /*기사 제목*/
     color:#000000;
-    font-size:18px;
+    font-size:20px;
+    text-align: center;
+    font-family: "Noto Serif KR";
+    font-weight: bolder;
+    word-wrap: break-word;
+}
+
+
+.texts { /*기사 본문*/
+    color:#000000;
+    font-size:15px;
     text-align: center;
     font-family: "Noto Serif KR";
     font-weight: normal;
+    word-wrap: break-word;
 }
 
 /* 이미지 스타일 */
@@ -75,10 +89,10 @@ h1 {
 
 }
 
-/* 뉴스 상세페이지 */
+/* 뉴스 상세페이지 박스 */
 .section {
-  margin: 300px auto;     
+  margin: 330px auto;     
   padding: 20px;         
-  width: 30%;
+  width: 320px;
   text-align: center;           
 }
