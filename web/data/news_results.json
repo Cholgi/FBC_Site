@@ -2,11 +2,11 @@
   {
     "id": "news1",
     "title": "네 번째 뉴스입니다.",
-    "image": "web/image/news1.jpg"
+    "allimage": "web/image/news1.png"
   },
   {
     "id": "news2",
-    "title": "네 번째 뉴스입니다.",
-    "image": "web/image/news2.jpg"
+    "title": "최신최신 뉴스입니다.",
+    "allimage": "web/image/news2.png"
   }
 ]
